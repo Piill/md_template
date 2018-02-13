@@ -1,13 +1,20 @@
 # Markdown template
-This is a simple markdown template for generating pdf's using latex and pandoc.
+
+This is a template for writing assignments and reports in markdown, using pandoc and latex.
+Included is a generic template and a DTU specefic template, but you can use your own.
+
+To switch between templates, simply change the template variable in the makefile
+
+To generate the pdf, simple run `make`
 
 Support for bibtex is done using pandoc-citeproc
 
-## Usage
-You need lualatex, pandoc and pandoc-citeproc installed, then simply run `make`
+## Install requirements
 
-Use your favorit latex template, or simply edit the generic template provided with the project.
+On any apt based system, the following should be enough to get you going:
+````
+sudo apt install pandoc pandoc-citeproc texlive texlive-luatex
+````
 
-
-
+Other systems are left as an exercise for the reader.
 

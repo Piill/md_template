@@ -1,0 +1,83 @@
+\documentclass[roman,11pt, English, final]{report}
+
+\newenvironment{tightcenter}
+{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}
+{%
+  \end{center}
+}
+
+\newcommand{\urlNewWindow}[1]{\href[pdfnewwindow=true]{#1}{\nolinkurl{#1}}}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{verbatim} % used for comments
+\usepackage[toc,page]{appendix} % used for appendix
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\def\code#1{\texttt{#1}}
+\toggletrue{is_danish}
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\scriptsize,
+  stepnumber=1,
+  numbersep=8pt,
+  showstringspaces=false,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  frame=single,                   % adds a frame around the code
+    frame=ltrb,
+  backgroundcolor=\color{lightlightgray}  
+}
+
+\titlepagepicture{DTULogo.tex}
+\author{\begin{tabular}{l l}
+     Navn&Studie-number\\\hline
+     Your Name1 & 123456\\
+     Your Name2 & 654321\\
+\end{tabular}} 
+
+
+\universityname{Danish Technical University}
+
+\ifdraft{
+\SetWatermarkText{UDKAST}
+\SetWatermarkScale{1}
+}{}
+
+\title{ Title}
+\course{Course Name}
+
+\begin{document}
+
+\maketitle
+
+\TOC{}
+
+\newpage
+
+$body$
+
+\bibliographystyle{plain}
+
+
+\end{document}
